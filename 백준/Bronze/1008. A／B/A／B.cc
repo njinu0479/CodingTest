@@ -1,16 +1,14 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
-    double num1, num2, result;
+    double a, b;
 
-    std::cin >> num1;
-    std::cin >> num2;
-
-    std::cout.precision(15);
-    std::cout << std::fixed;
-    
-    result = num1 / num2;
-    std::cout << result;
+	cin >> a >> b;
+    cout.precision(9);
+    cout << fixed;
+    cout << a / b;
 
     return 0;
 }
