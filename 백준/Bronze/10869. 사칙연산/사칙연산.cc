@@ -1,16 +1,16 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
-    int num1, num2;
+    int a, b;
 
-    std::cin >> num1;
-    std::cin >> num2;
-
-    std::cout << num1 + num2 << "\n";
-    std::cout << num1 - num2 << "\n";
-    std::cout << num1 * num2 << "\n";
-    std::cout << num1 / num2 << "\n";
-    std::cout << num1 % num2;
+	cin >> a >> b;
+    cout << a + b << "\n"
+         << a - b << "\n"
+         << a * b << "\n"
+         << a / b << "\n"
+         << a % b;
 
     return 0;
 }
