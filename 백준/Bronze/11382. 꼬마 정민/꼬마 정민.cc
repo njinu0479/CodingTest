@@ -1,10 +1,12 @@
 #include <iostream>
 
-int main() {
-    long long num1, num2, num3;
+using namespace std;
 
-    std::cin >> num1 >> num2 >> num3;
-    std::cout << num1 + num2 + num3;
+int main() {
+    long a, b, c;
+
+    cin >> a >> b >> c;
+    cout << a + b + c;
 
     return 0;
 }
