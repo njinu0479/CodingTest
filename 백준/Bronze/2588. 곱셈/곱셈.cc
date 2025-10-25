@@ -1,14 +1,15 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
-    int num1, num2;
+    int a, b;
 
-    std::cin >> num1 >> num2;
-
-    std::cout << num2 % 100 % 10 * num1 << "\n";
-    std::cout << num2 % 100 / 10 * num1 << "\n";
-    std::cout << num2 / 100 * num1 << "\n";
-    std::cout << num1 * num2;
+    cin >> a >> b;
+    cout << a * (b % 100 % 10) << "\n"
+         << a * (b % 100 / 10) << "\n"
+         << a * (b / 100) << "\n"
+         << a * b;
 
     return 0;
 }
