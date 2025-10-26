@@ -1,15 +1,17 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
-    int score;
+    int s;
 
-    std::cin >> score;
+    cin >> s;
 
-    if(score <= 100 && score >= 90) std::cout << "A";
-    if(score < 90 && score >= 80) std::cout << "B";
-    if(score < 80 && score >= 70) std::cout << "C";
-    if(score < 70 && score >= 60) std::cout << "D";
-    if(score < 60 && score >= 0) std::cout << "F";
+    if(s >= 90) std::cout << "A";
+    else if(s < 90 && s >= 80) std::cout << "B";
+    else if(s < 80 && s >= 70) std::cout << "C";
+    else if(s < 70 && s >= 60) std::cout << "D";
+    else std::cout << "F";
 
     return 0;
 }
