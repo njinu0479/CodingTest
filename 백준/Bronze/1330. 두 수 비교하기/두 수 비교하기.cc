@@ -1,12 +1,14 @@
 #include <iostream>
 
-int main() {
-    int num1, num2;
+using namespace std;
 
-    std::cin >> num1 >> num2;
-    if(num1 < num2) std::cout << "<";
-    if(num1 > num2) std::cout << ">";
-    if(num1 == num2) std::cout << "==";
+int main() {
+    int a, b;
+
+    std::cin >> a >> b;
+    if(a < b) cout << "<";
+    else if(a > b) cout << ">";
+    else cout << "==";
 
     return 0;
 }
