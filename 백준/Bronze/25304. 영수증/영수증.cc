@@ -3,11 +3,9 @@
 using namespace std;
 
 int main() {
-
     int x, t, a, b;
 
-    cin >> x;
-    cin >> t;
+    cin >> x >> t;
 
     for (int i = 0; i < t; i++) {
         cin >> a >> b;
