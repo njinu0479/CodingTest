@@ -1,17 +1,19 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
-    int dice1, dice2, dice3;
+    int a, b, c;
 
-    std::cin >> dice1 >> dice2 >> dice3;
+    cin >> a >> b >> c;
 
-    if (dice1 == dice2 && dice2 == dice3) std::cout << 10000 + dice1 * 1000;
-    else if (dice1 == dice2 || dice2 == dice3) std::cout << 1000 + dice2 * 100;
-    else if (dice3 == dice1) std::cout << 1000 + dice3 * 100;
+    if (a == b && b == c) cout << 10000 + a * 1000;
+    else if (a == b || b == c) cout << 1000 + b * 100;
+    else if (c == a) cout << 1000 + c * 100;
     else {
-        if (dice1 > dice2 && dice1 > dice3) std::cout << dice1 * 100;
-        else if (dice2 > dice1 && dice2 > dice3) std::cout << dice2 * 100;
-        else std::cout << dice3 * 100;
+        if (a > b && a > c) cout << a * 100;
+        else if (b > a && b > c) cout << b * 100;
+        else cout << c * 100;
     }
 
     return 0;
