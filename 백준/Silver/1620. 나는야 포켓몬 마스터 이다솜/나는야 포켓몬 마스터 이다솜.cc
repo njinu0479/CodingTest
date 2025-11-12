@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <cctype>
 
 using namespace std;
@@ -12,7 +12,7 @@ int main() {
     int n, m;
     cin >> n >> m;
     vector<string> dic(n);
-    map<string, int> map;
+    unordered_map<string, int> map;
 
     for(int i = 0; i < n; i++) {
         cin >> dic[i];
