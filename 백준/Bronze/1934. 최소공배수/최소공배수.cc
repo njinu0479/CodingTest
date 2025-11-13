@@ -10,21 +10,17 @@ int main() {
     cin >> n;
 
     for(int i = 0; i < n; i++) {
-        int a, b, t, cnt = 1;
+        int a, b, ans;
         cin >> a >> b;
-        t = min(a, b);
-
-        for(int j = 2; j <= t; j++) {
-            if(a % j == 0 && b % j == 0) {
-                cnt *= j;
-                a /= j;
-                b /= j;
-                j--;
-            }
+        ans = a * b;
+        
+        while(b != 0) {
+            int t = a % b;
+            a = b;
+            b = t;
         }
-
-        cnt *= a * b;
-        cout << cnt << '\n';
+        
+        cout << ans / a << '\n';
     }
 
     return 0;
