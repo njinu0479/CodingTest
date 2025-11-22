@@ -4,7 +4,6 @@ using namespace std;
 
 int n, m;
 int nums[9];
-bool visited[9];
 
 void dfs(int num, int cnt) {
     if(cnt == m) {
@@ -14,12 +13,8 @@ void dfs(int num, int cnt) {
     }
 
     for(int i = num; i <= n; i++) {
-        if(!visited[i]) {
-            visited[i] = true;
-            nums[cnt] = i;
-            dfs(i + 1, cnt + 1);
-            visited[i] = false;
-        }
+        nums[cnt] = i;
+        dfs(i + 1, cnt + 1);
     }
 }
 
