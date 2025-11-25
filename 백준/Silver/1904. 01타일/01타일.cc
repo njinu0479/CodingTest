@@ -2,8 +2,6 @@
 
 using namespace std;
 
-long long arr[1000001] = {0 };
-
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -11,12 +9,24 @@ int main() {
     int n;
     cin >> n;
 
-    arr[1] = 1, arr[2] = 2;
-    for(int i = 3; i <= n; i++) {
-        arr[i] = (arr[i - 1] + arr[i - 2]) % 15746;
+    long long a = 1, b = 2, cur = 0;
+
+    if(n == 1) {
+        cout << 1;
+        return 0;
+    }
+    if(n == 2) {
+        cout << 2;
+        return 0;
     }
 
-    cout << arr[n];
+    for(int i = 3; i <= n; i++) {
+        cur = (a + b) % 15746;
+        a = b;
+        b = cur;
+    }
+
+    cout << cur;
 
     return 0;
 }
