@@ -7,24 +7,26 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int n;
+    int n, result;
     cin >> n;
     
-    vector<vector<int>> arr(n, vector<int>(n));
+    vector<int> temp(n + 1), cur_max(n + 1, 0);
 
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j <= i; j++) {
-            cin >> arr[i][j];
+    for(int i = 1; i <= n; i++) {
+        for(int j = 1; j <= i; j++) {
+            cin >> temp[j];
+        }
+
+        for(int j = i; j >= 1; j--) {
+            cur_max[j] = temp[j] + max(cur_max[j - 1], cur_max[j]);
         }
     }
 
-    for (int i = n - 2; i >= 0; i--) {
-        for (int j = 0; j <= i; j++) {
-            arr[i][j] += max(arr[i + 1][j], arr[i + 1][j + 1]);
-        }
+    for(int i = 1; i <= n; i++) {
+        result = max(result, cur_max[i]);
     }
 
-    cout << arr[0][0];
+    cout << result;
 
     return 0;
 }
